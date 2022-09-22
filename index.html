@@ -21,11 +21,42 @@
         referrerpolicy="no-referrer" 
     />
 
-    <!--Fazer cadastro no Weather API-->    
-
+    
 
 </head>
 <body>
-    <h2>Clima Agora</h2>
+    <div class="container">
+        <div class="form">
+            <h3>Confira o clima de uma cidade</h3>
+            <div class="form-input-container">
+                <input type="text" placeholder="Digita o nome da cidade" id="city-input">
+                <button id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        <div id="weather-data">
+            <h2>
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="city">Aracruz</span>
+                <img src="https://countryflagsapi.com/png/br" alt="Bandeira do País" id="country"/>
+            </h2>
+            <p id="temperature"><span>38</span>&deg;C</p>
+            <div id="description-container">
+                <p id="description">Nublado</p>
+                <img src="https://openweathermap.org/img/wn/01d.png" alt="Condições do tempo" id="weather-icon">
+            </div>
+            <div id="details-container">
+                <p id="umidity">
+                    <i class="fa-solid fa-dorplet"></i>
+                    <span>48%</span>
+                </p>
+                <p id="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>3km/h</span>
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
