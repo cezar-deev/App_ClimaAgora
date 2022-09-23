@@ -54,7 +54,7 @@ const showWeatherData = async (city) => {  // Função para atualizar os element
     );
     countryElement.setAttribute("src", apiCountryURL + data.sys.country);
     humidityElement.innerText = `${data.main.humidity} %`;
-    windElement.innerText = `${data.wind.speed} km/h%`;
+    windElement.innerText = `${data.wind.speed} km/h`;
 
     weatherContainer.classList.remove("hide") // Acessa as classes com ( classList) e remove a classe hide. com isso faz aparcer os intens que estavam escondidos com a class(hide) : none no css;
 }
