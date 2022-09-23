@@ -18,6 +18,7 @@ const weartherIconElement = document.querySelector("#weather-icon");
 const countryElement = document.querySelector("#country");
 const humidityElement = document.querySelector("#humidity span");
 const windElement = document.querySelector("#wind span");
+const weatherContainer = document.querySelector("#weather-data") 
 
 
 // Funções 
@@ -54,6 +55,8 @@ const showWeatherData = async (city) => {  // Função para atualizar os element
     countryElement.setAttribute("src", apiCountryURL + data.sys.country);
     humidityElement.innerText = `${data.main.humidity} %`;
     windElement.innerText = `${data.wind.speed} km/h%`;
+
+    weatherContainer.classList.remove("hide") // Acessa as classes com ( classList) e remove a classe hide. com isso faz aparcer os intens que estavam escondidos com a class(hide) : none no css;
 }
 
 
@@ -65,4 +68,14 @@ searchBtn.addEventListener("click", (e) => {
     const city = cityInput.value; // Pegando o valor da digitado no Input
     //console.log(city); // Usado só para ver se o evento funciona, usando o console do navegador.
     showWeatherData(city); // chamando a função deita ai em cima 
-});      
+});  
+
+
+// Evento que pega o clique do botão Enter e executa a busca
+cityInput.addEventListener("keyup", (e) => {
+    if (e.code === "Enter") {
+        const city = e.target.value;
+
+        showWeatherData(city);
+    }
+});    
