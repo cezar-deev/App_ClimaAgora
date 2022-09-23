@@ -27,7 +27,7 @@ const weatherContainer = document.querySelector("#weather-data")
 // função que acessa a API
 const getWeartherData = async(city) => {
 
-    const apiweatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}&lang=pt_br` // Com uma string dinamica (``) Aqui pego a cidade digitado no input, usando o apikey.
+    const apiweatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikey}&lang=pt_br` // Com uma string dinamica (``) Aqui pego a cidade digitado no input, usando o apikey.
 
     const res = await fetch(apiweatherURL); // Espero o fetch ou retorno desta URL;
     const data = await res.json(); // Espero receber a inform, converto de JSON para OBJETO JS 
