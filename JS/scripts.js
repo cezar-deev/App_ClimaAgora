@@ -50,7 +50,7 @@ const showWeatherData = async (city) => {  // Função para atualizar os element
     descElement.innerText = data.weather[0].description; // Insere no elemento [descElement] os dados da API.
     weartherIconElement.setAttribute(
         "src", 
-        `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+        `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
     );
     countryElement.setAttribute("src", apiCountryURL + data.sys.country);
     humidityElement.innerText = `${data.main.humidity} %`;
